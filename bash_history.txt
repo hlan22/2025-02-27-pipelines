@@ -1,0 +1,63 @@
+    1  refresh
+    2  ls
+    3  cd./
+    4  cd .
+    5  ls
+    6  cd ..
+    7  ls
+    8  R
+    9  cd Documents/
+   10  pwd
+   11  ls
+   12  cd Documents
+   13  ls
+   14  cf  dsci-310-group-7-data-dudes
+   15  cd   dsci-310-group-7-data-dudes
+   16  git status
+   17  git pull
+   18  git status
+   19  git add .
+   20  git commit -m "updated analysis pdf to include summary, intro, and references"
+   21  git push origin main
+   22  cd ..
+   23  git clone https://github.com/hlan22/2025-02-27-pipelines.git
+   24  ls
+   25  cd 2025-02-27-pipelines
+   26  code analysis.R
+   27  01-load.R
+   28  code 01-load.R
+   29  code 01-load_clean.R
+   30  code analysis.sh
+   31  code Makefile
+   32  make download
+   33  make analysis
+   34  git status
+   35  git commit analysis.R
+   36  git add analysis.R
+   37  git commit -m "create base analysis to use as an example"
+   38  git add 2025-02-27-pipelines.Rproj
+   39  git commit -m "create r project to standardize working directory"
+   40  git add data/
+   41  git commit -m "add data to work with"
+   42  git add output/ "create folder to store all outputs/images"
+   43  git add output/
+   44  git commit -m "create folder to store all outputs/images"
+   45  git status
+   46  git add 01-load_clean.R
+   47          02-eda.R
+   48          03-model.R
+   49          04-analyze.R
+   50   git add       02-eda.R
+   51     git add     03-model.R
+   52      git add    04-analyze.R
+   53  git status
+   54  git commit -m "create r scripts that split up analysis"
+   55  git status
+   56  git add analysis.sh
+   57  git commit -m "create bash file for how you COULD run all the scripts automatically"
+   58  git add Makefile
+   59  git commit -m "create Make file to run all scripts in a functional way"
+   60  git add README.md
+   61  git commit -m "start summary of lecture"
+   62  git status
+   63  history > bash_history.txt
