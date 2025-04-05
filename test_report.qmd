@@ -1,0 +1,70 @@
+---
+title: "Test Report"
+format: pdf
+editor: visual
+---
+
+Here I want to show the data:
+
+```{r}
+data <- readr::read_csv("data/titanic_clean.csv")
+head(data)
+```
+
+Here I want to show my eda/plots:
+
+![title](output/titanic1.png){#key}
+
+
+
+::: {#fig-titanic1}
+![Survival rates by class and gender](output/titanic1.png)
+:::
+
+
+As seen in Figure @fig-titanic1, survival rates varied significantly by class and gender.
+
+we can also reference the image @key like that.
+
+
+
+# What about referencing R scripts?
+
+We COULD run the scripts from the actual document, 
+although the professor does not like that
+```{r}
+# source("scripts/analysis.R")
+# source("02-eda.R")
+
+```
+
+
+You can display code from an R script like the following:
+
+```{r, echo=TRUE}
+#readLines("scripts/analysis.R")
+
+# readLines("02-eda.R")
+```
+
+You can also run an Rscript and display its output like this:
+
+```{r}
+library(knitr)
+#knitr::knit_child("scripts/analysis.R")
+# knitr::knit_child("02-eda.R")
+```
+
+if you want to include the script as an external code block without running it:
+
+r, code=readLines("scripts/analysis.R")
+
+`{r, code=readLines("02-eda.R")}`
+
+
+If your R script contains Quarto-friendly code chunks ({r}) and you want to include it as a child document, use:
+
+`{{< include 02-eda.R >}}`
+
+`{{< include scripts/analysis.R >}}`
+
